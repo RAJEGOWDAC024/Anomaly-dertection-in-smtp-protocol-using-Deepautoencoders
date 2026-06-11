@@ -9,39 +9,39 @@ The project demonstrates the application of Machine Learning and Deep Learning t
 
 🚀 Features
 
--Data Cleaning and Preprocessing
--Categorical Feature Encoding
--Outlier Detection and Removal using IQR
--Feature Normalization using StandardScaler
--Deep Autoencoder Architecture
--Early Stopping for Optimal Training
--Anomaly Detection using Reconstruction Error
--Performance Evaluation using:
--Confusion Matrix
--Precision
--Recall
--F1-Score
--ROC-AUC Score
--Visualization of Training Performance
+1.Data Cleaning and Preprocessing
+2.Categorical Feature Encoding
+3.Outlier Detection and Removal using IQR
+4.Feature Normalization using StandardScaler
+5.Deep Autoencoder Architecture
+6.Early Stopping for Optimal Training
+7.Anomaly Detection using Reconstruction Error
+8.Performance Evaluation using:
+9.Confusion Matrix
+10.Precision
+11.Recall
+12.F1-Score
+13.ROC-AUC Score
+14.Visualization of Training Performance
 
 🛠️ Technologies Used
 
--Python
--NumPy
--Pandas
--Matplotlib
--Seaborn
--Scikit-Learn
--TensorFlow
--Keras
--Jupyter Notebook
+1.Python
+2.NumPy
+3.Pandas
+4.Matplotlib
+5.Seaborn
+6.Scikit-Learn
+7.TensorFlow
+8.Keras
+9.Jupyter Notebook
 
 📂 Dataset
 
 The project uses the NSL-KDD Dataset, an improved version of the KDD Cup 1999 dataset widely used for intrusion detection research.
 
 Dataset Features Include:
--Protocol Type
+1.Protocol Type
 -Service
 -Connection Duration
 -Source Bytes
@@ -103,9 +103,9 @@ Decoder:
 -50 Epochs Maximum
 
 9. Anomaly Detection
--Calculate reconstruction error.
--Identify anomalies using threshold values.
--Classify traffic as Normal or Attack.
+->Calculate reconstruction error.
+->Identify anomalies using threshold values.
+->Classify traffic as Normal or Attack.
 
 10. Evaluation
 -Precision Score
@@ -120,10 +120,10 @@ Decoder:
 The trained Autoencoder learns normal SMTP traffic behavior and detects suspicious network activities based on reconstruction error.
 
 Key benefits:
--High detection capability
--Reduced false positives
--Efficient network monitoring
--Enhanced cybersecurity protection
+1.High detection capability
+2.Reduced false positives
+3.Efficient network monitoring
+4.Enhanced cybersecurity protection
 
 📁 Project Structure
 Anomaly-Detection-SMTP/
