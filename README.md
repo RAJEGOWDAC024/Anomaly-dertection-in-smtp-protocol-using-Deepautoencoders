@@ -1,132 +1,162 @@
-# Anomaly-dertection-in-smtp-protocol-using-DeepAutoencoders
-Anomaly Detection in SMTP Protocol Using DeepAutoencoders
 
-📌 Project Overview
+# Anomaly Detection in SMTP Protocol Using Deep Autoencoders
 
-This project focuses on detecting anomalous and malicious network activities in SMTP (Simple Mail Transfer Protocol) traffic using a Deep Learning Autoencoder model. The system is trained on the NSL-KDD dataset and learns the normal behavior of network traffic. Any significant deviation from the learned patterns is identified as an anomaly, helping detect cyberattacks and suspicious activities.
+## 📌 Project Overview
+
+This project focuses on detecting anomalous and malicious network activities in SMTP (Simple Mail Transfer Protocol) traffic using a Deep Learning Autoencoder model.
+
+The system is trained on the NSL-KDD dataset and learns the normal behavior of network traffic. Any significant deviation from the learned patterns is identified as an anomaly, helping detect cyberattacks and suspicious activities.
 
 The project demonstrates the application of Machine Learning and Deep Learning techniques in Network Security and Intrusion Detection Systems (IDS).
 
-🚀 Features
+---
 
-1.Data Cleaning and Preprocessing
-2.Categorical Feature Encoding
-3.Outlier Detection and Removal using IQR
-4.Feature Normalization using StandardScaler
-5.Deep Autoencoder Architecture
-6.Early Stopping for Optimal Training
-7.Anomaly Detection using Reconstruction Error
-8.Performance Evaluation using:
-9.Confusion Matrix
-10.Precision
-11.Recall
-12.F1-Score
-13.ROC-AUC Score
-14.Visualization of Training Performance
+## 🚀 Features
 
-🛠️ Technologies Used
+* Data Cleaning and Preprocessing
+* Categorical Feature Encoding
+* Outlier Detection and Removal using IQR
+* Feature Normalization using StandardScaler
+* Deep Autoencoder Architecture
+* Early Stopping for Optimal Training
+* Anomaly Detection using Reconstruction Error
+* Performance Evaluation using:
 
-1.Python
-2.NumPy
-3.Pandas
-4.Matplotlib
-5.Seaborn
-6.Scikit-Learn
-7.TensorFlow
-8.Keras
-9.Jupyter Notebook
+  * Confusion Matrix
+  * Precision
+  * Recall
+  * F1-Score
+  * ROC-AUC Score
+* Visualization of Training Performance
 
-📂 Dataset
+---
 
-The project uses the NSL-KDD Dataset, an improved version of the KDD Cup 1999 dataset widely used for intrusion detection research.
+## 🛠️ Technologies Used
 
-Dataset Features Include:
-1.Protocol Type
--Service
--Connection Duration
--Source Bytes
--Destination Bytes
--Error Rates
--Login Information
--Traffic Statistics
--Attack Labels
+* Python
+* NumPy
+* Pandas
+* Matplotlib
+* Seaborn
+* Scikit-Learn
+* TensorFlow
+* Keras
+* Jupyter Notebook
 
-🔄 Project Workflow
+---
 
-1. Data Loading
--Load NSL-KDD training and testing datasets.
--Assign feature names.
+## 📂 Dataset
 
-2. Data Cleaning
--Remove duplicate records.
--Handle missing values.
--Verify dataset integrity.
+The project uses the **NSL-KDD Dataset**, an improved version of the KDD Cup 1999 dataset widely used for intrusion detection research.
 
-3. Data Preprocessing
-Convert attack labels into binary classes:
--Normal → 0
--Attack → 1
--Encode categorical features.
--Prepare feature and target variables.
+### Dataset Features Include
 
-4. Outlier Removal
--Apply Interquartile Range (IQR) method.
--Remove extreme outlier samples.
+* Protocol Type
+* Service
+* Connection Duration
+* Source Bytes
+* Destination Bytes
+* Error Rates
+* Login Information
+* Traffic Statistics
+* Attack Labels
 
-5. Data Normalization
--Standardize features using StandardScaler.
--Improve model convergence.
+---
 
-6. Train-Test Split
-Split data into:
--Training Set
--Validation Set
--Test Set
+## 🔄 Project Workflow
 
-7. Autoencoder Model
+### 1. Data Loading
 
-Encoder:
--Dense Layer (32 neurons)
--Batch Normalization
--Dense Layer (16 neurons)
--Latent Space (8 neurons)
+* Load NSL-KDD training and testing datasets
+* Assign feature names
 
-Decoder:
--Dense Layer (16 neurons)
--Dense Layer (32 neurons)
--Output Layer
+### 2. Data Cleaning
 
-8. Model Training
--Optimizer: Adam
--Loss Function: Mean Squared Error (MSE)
--Early Stopping implemented
--50 Epochs Maximum
+* Remove duplicate records
+* Handle missing values
+* Verify dataset integrity
 
-9. Anomaly Detection
-->Calculate reconstruction error.
-->Identify anomalies using threshold values.
-->Classify traffic as Normal or Attack.
+### 3. Data Preprocessing
 
-10. Evaluation
--Precision Score
--Recall Score
--F1 Score
--ROC Curve
--AUC Score
--Confusion Matrix
+* Convert attack labels into binary classes:
 
-📊 Expected Results:
+  * Normal → 0
+  * Attack → 1
+* Encode categorical features
+* Prepare feature and target variables
+
+### 4. Outlier Removal
+
+* Apply Interquartile Range (IQR) method
+* Remove extreme outlier samples
+
+### 5. Data Normalization
+
+* Standardize features using StandardScaler
+* Improve model convergence
+
+### 6. Train-Test Split
+
+* Training Set
+* Validation Set
+* Test Set
+
+### 7. Autoencoder Model
+
+#### Encoder
+
+* Dense Layer (32 neurons)
+* Batch Normalization
+* Dense Layer (16 neurons)
+* Latent Space (8 neurons)
+
+#### Decoder
+
+* Dense Layer (16 neurons)
+* Dense Layer (32 neurons)
+* Output Layer
+
+### 8. Model Training
+
+* Optimizer: Adam
+* Loss Function: Mean Squared Error (MSE)
+* Early Stopping
+* Maximum 50 Epochs
+
+### 9. Anomaly Detection
+
+* Calculate reconstruction error
+* Identify anomalies using threshold values
+* Classify traffic as Normal or Attack
+
+### 10. Evaluation Metrics
+
+* Precision Score
+* Recall Score
+* F1 Score
+* ROC Curve
+* AUC Score
+* Confusion Matrix
+
+---
+
+## 📊 Expected Results
 
 The trained Autoencoder learns normal SMTP traffic behavior and detects suspicious network activities based on reconstruction error.
 
-Key benefits:
-1.High detection capability
-2.Reduced false positives
-3.Efficient network monitoring
-4.Enhanced cybersecurity protection
+### Key Benefits
 
-📁 Project Structure
-Anomaly-Detection-SMTP/
+* High Detection Capability
+* Reduced False Positives
+* Efficient Network Monitoring
+* Enhanced Cybersecurity Protection
+
+---
+
+## 📁 Project Structure
+
+```text
+Anomaly-dertection-in-smtp-protocol-using-Deepautoencoders/
 │
 ├── Anomaly detect in smtp.ipynb
 ├── README.md
@@ -139,32 +169,62 @@ Anomaly-Detection-SMTP/
     ├── confusion_matrix.png
     ├── roc_curve.png
     └── training_history.png
+```
 
-⚙️ Installation
+## ⚙️ Installation
 
-1.Clone Repository
+### Clone Repository
+
+```bash
 git clone https://github.com/RAJEGOWDAC024/Anomaly-dertection-in-smtp-protocol-using-Deepautoencoders.git
 cd Anomaly-dertection-in-smtp-protocol-using-Deepautoencoders
+```
 
-2.Install Dependencies
+### Install Dependencies
+
+```bash
 pip install -r requirements.txt
+```
 
-3.Run Notebook
+### Run Notebook
+
+```bash
 jupyter notebook
+```
 
-4.Open:
+Open:
+
+```text
 Anomaly detect in smtp.ipynb
+```
 
-🎯 Applications
+---
 
--Intrusion Detection Systems (IDS)
--Cybersecurity Monitoring
--SMTP Traffic Analysis
--Threat Detection
--Network Security Research
--Enterprise Security Solutions
+## 🎯 Applications
 
-Author: Raje Gowda C
-GitHub: https://github.com/RAJEGOWDAC024/
-Repository: Anomaly Detection in SMTP Protocol Using Deep Autoencoders
-Linkedin: https://www.linkedin.com/in/raje-gowda-c-a4b56929a/
+* Intrusion Detection Systems (IDS)
+* Cybersecurity Monitoring
+* SMTP Traffic Analysis
+* Threat Detection
+* Network Security Research
+* Enterprise Security Solutions
+
+---
+
+## 👨‍💻 Author
+
+**Raje Gowda C**
+
+GitHub: https://github.com/RAJEGOWDAC024
+
+Repository: https://github.com/RAJEGOWDAC024/Anomaly-dertection-in-smtp-protocol-using-Deepautoencoders
+
+LinkedIn: https://www.linkedin.com/in/raje-gowda-c-a4b56929a/
+
+---
+
+## ⭐ Support
+
+If you found this project useful, please consider giving the repository a star on GitHub.
+
+Your support helps improve and maintain the project.
