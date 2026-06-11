@@ -1,0 +1,73 @@
+## 📂 Dataset Information
+
+This project uses the **NSL-KDD (Network Security Laboratory Knowledge Discovery and Data Mining)** dataset, a widely used benchmark dataset for Intrusion Detection System (IDS) research.
+
+NSL-KDD was developed as an improved version of the KDD Cup 1999 dataset to address issues such as redundant records, biased learning, and inaccurate performance evaluation. The dataset provides a more balanced and realistic environment for evaluating machine learning and deep learning models used in network intrusion detection.
+
+### Dataset Files
+
+#### KDDTrain+.txt
+
+* Training dataset used for model training.
+* Contains normal and attack network traffic records.
+* Includes attack labels and difficulty levels.
+* Approximately 125,973 network connection records.
+
+#### KDDTest+.txt
+
+* Testing dataset used for model evaluation.
+* Contains both known and previously unseen attack types.
+* Used to measure the model's generalization capability.
+* Approximately 22,544 network connection records.
+
+### Features
+
+The dataset contains 41 network traffic features grouped into:
+
+* Basic Connection Features
+* Content Features
+* Traffic Features
+* Host-Based Features
+
+Examples include:
+
+* Duration
+* Protocol Type
+* Service
+* Source Bytes
+* Destination Bytes
+* Flag
+* Wrong Fragment
+* Urgent Packets
+* Number of Failed Logins
+* Logged In Status
+* Count
+* Service Count
+* Error Rates
+
+### Attack Categories
+
+The dataset includes several categories of cyberattacks:
+
+* DoS (Denial of Service)
+* Probe (Surveillance and Scanning)
+* R2L (Remote to Local)
+* U2R (User to Root)
+* Normal Traffic
+
+### Why NSL-KDD?
+
+* Removes duplicate records from the original KDD'99 dataset.
+* Reduces classifier bias caused by redundant samples.
+* Provides more reliable evaluation results.
+* Widely used in cybersecurity and intrusion detection research.
+
+### Dataset Usage in This Project
+
+In this project:
+
+1. Network traffic records are preprocessed and normalized.
+2. Categorical features are encoded into numerical values.
+3. A Deep Autoencoder is trained to learn normal SMTP traffic behavior.
+4. Reconstruction error is used to identify anomalous or malicious activities.
+5. Performance is evaluated using Precision, Recall, F1-Score, ROC-AUC, and Confusion Matrix.
